@@ -18,7 +18,7 @@ connectDB();
 
 const app = express()
 
-app.use('/uploads/images',express.static(path.join('uploads','images')))
+app.use('/images',express.static(path.join('images')))
 app.use(express.json())
 app.use('/api/products',productRoutes)
 app.use('/api/auth',userRoutes)
