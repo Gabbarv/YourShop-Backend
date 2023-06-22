@@ -7,6 +7,8 @@ import multer from "multer"
 
 const router = express.Router()
 
+
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'backend/uploads/images')
