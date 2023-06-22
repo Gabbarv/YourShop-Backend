@@ -5,6 +5,7 @@ import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import pincodeRoutes from './routes/pincodeRoutes.js'
+import { fileURLToPath } from 'url';
 import path from 'path'
 
 
@@ -14,7 +15,8 @@ connectDB();
 
 
 
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express()
 app.use(express.static(path.join(__dirname, 'uploads')));
