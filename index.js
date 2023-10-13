@@ -5,6 +5,7 @@ import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import pincodeRoutes from './routes/pincodeRoutes.js'
+import paymentRoutes from  './routes/paymentRoutes.js'
 import cors from 'cors'
 import { fileURLToPath } from 'url';
 import path from 'path'
@@ -29,5 +30,7 @@ app.use('/api/products',productRoutes)
 app.use('/api/auth',userRoutes)
 app.use('/api/orders',orderRoutes)
 app.use('/api/pincodes',pincodeRoutes)
+app.use('/api/payment',paymentRoutes)
+
 
 app.listen(5000,console.log('server running on port 5000'))
